@@ -1,0 +1,33 @@
+#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int factorial(int num)
+{
+    if (num == 1)
+    {
+        return 1;
+    }
+    return num * (factorial(num - 1));
+}
+
+int main()
+{
+
+    int t;
+    cin >> t;
+
+    while (t--)
+    {
+        cout << factorial(5) << endl;
+    }
+
+    return 0;
+}
+
+
+
+// Time Complexity
+// O(n)   
+// n -> The number passed in function factorial
