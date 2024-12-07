@@ -285,6 +285,157 @@ void pattern15()
         cout << endl;
     }
 }
+void pattern16()
+{
+    int n = 5;
+    char ch = 'A';
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << ch << " ";
+        }
+        ch++;
+        cout << endl;
+    }
+}
+void pattern17()
+{
+    int n = 4;
+    for (int i = 1; i <= n; i++)
+    {
+        // space
+        for (int k = 1; k <= (n - i); k++)
+        {
+            cout << " ";
+        }
+
+        // alphabet
+        char ch = 'A';
+        int breakpoint = (2 * i - 1) / 2;
+        for (int j = 1; j <= 2 * i - 1; j++)
+        {
+            cout << ch;
+            if (j <= breakpoint)
+                ch++;
+            else
+                ch--;
+        }
+
+        // space
+        for (int k = 1; k <= (n - i); k++)
+        {
+            cout << " ";
+        }
+
+        cout << endl;
+    }
+}
+void pattern18()
+{
+    int n = 5;
+    for (int i = 1; i <= n; i++)
+    {
+        for (char ch = 'E' + 1 - i; ch <= 'E'; ch++)
+        {
+            cout << ch;
+        }
+        cout << endl;
+    }
+}
+void pattern19()
+{
+    int n = 5;
+    // i,j,k
+    for (int i = 1; i <= n; i++)
+    {
+        // star
+        for (int j = 1; j <= n + 1 - i; j++)
+        {
+            cout << "*";
+        }
+        // space
+        for (int k = 1; k <= 2 * i - 2; k++)
+        {
+            cout << " ";
+        }
+
+        // star
+        for (int j = 1; j <= n + 1 - i; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+    // x,y,z
+    for (int x = 1; x <= n; x++)
+    {
+        // stars
+        for (int y = 1; y <= x; y++)
+        {
+            cout << "*";
+        }
+        // spaces
+        for (int z = 1; z <= 2 * (n - x); z++)
+        {
+            cout << " ";
+        }
+        // stars
+        for (int y = 1; y <= x; y++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+void pattern20()
+{
+    int n = 5;
+    int totalRows = 2 * n - 1;
+    int breakpoint = (totalRows / 2) + 1;
+    for (int i = 1; i <= totalRows; i++)
+    {
+        if (i <= breakpoint)
+        {
+            // stars
+            for (int j = 1; j <= i; j++)
+            {
+                cout << "*";
+            }
+            // spaces
+            for (int k = 1; k <= 2 * (n - i); k++)
+            {
+                cout << " ";
+            }
+            // stars
+            for (int j = 1; j <= i; j++)
+            {
+                cout << "*";
+            }
+        }
+        else
+        {
+            // stars
+            for (int p = 1; p <= 2 * n - i; p++)
+            {
+                cout << "*";
+            }
+            // spaces
+            for (int q = 1; q <= (2 * (i - n)) ; q++)
+            {
+                cout << " ";
+            }
+            // stars
+            for (int p = 1; p <= 2 * n - i; p++)
+            {
+                cout << "*";
+            }
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
     int t = 1;
@@ -292,7 +443,7 @@ int main()
 
     while (t--)
     {
-        pattern15();
+        pattern20();
     }
     return 0;
 }
